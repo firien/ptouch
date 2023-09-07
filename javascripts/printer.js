@@ -1,4 +1,4 @@
-import packBits from './src/pack-bits.js'
+import packBits from './pack-bits.js'
 
 const totalPinCount = 128
 let printAreaPins = 0

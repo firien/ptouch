@@ -1,0 +1,53 @@
+doctype html
+html(lang="en")
+  head
+    title=name()
+    meta(charset="UTF-8")
+    meta(name="Description" content=desc())
+    meta(name="theme-color" content=themeColor())
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    // scripts
+    script&attributes(scriptAttributes('index.js'))
+    // css
+    link(rel='stylesheet' href=webAssetPath('index.css'))
+    // icons
+    //- link(rel="icon" href="favicon.ico" type="image/x-icon")
+    //- each icon in iconLinks()
+    //-   link(rel=icon.rel sizes=icon.sizes href=icon.href)
+    //- // pwa
+    //- link(rel="manifest", href="manifest.webmanifest")
+  body
+    noscript
+      p Requires javascript
+
+    h1 Brother P-touch
+    ul
+      li PT-E550W
+      li P750W
+      li P710BT
+    textarea#text
+    button#connect Connect
+    button#print(disabled) Print
+    button#status(disabled) Status
+    hr
+    input#hires(type="checkbox")
+    label(for="hires") High Resolution
+    input#chain(type="checkbox")
+    label(for="chain") Chain
+    input#compression(type="checkbox")
+    label(for="compression") Compress
+    input#auto-cut(type="checkbox")
+    label(for="auto-cut") AutoCut
+    hr
+    label(for="tape-width") Tape Width
+    select#tape-width
+      option(value="3.5") 3.5mm
+      option(value="6") 6mm
+      option(value="9") 9mm
+      option(value="12") 12mm
+      option(value="18") 18mm
+      option(value="24") 24mm
+    hr
+    output
+    hr

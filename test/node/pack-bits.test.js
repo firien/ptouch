@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import packBits from '../../src/pack-bits.js'
+import packBits from '../../javascripts/pack-bits.js'
 
 test('pack all same bytes', () => {
   const bytes = [4, 4, 4, 4, 4, 4]

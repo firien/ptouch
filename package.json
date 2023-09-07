@@ -5,8 +5,8 @@
   "description": "",
   "main": "labeler.js",
   "engineStrict": true,
-  "engines" : {
-    "node" : ">=18.0.0"
+  "engines": {
+    "node": ">=18.0.0"
   },
   "scripts": {
     "test": "node test/node/pack-bits.test.js",
@@ -15,6 +15,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "esbuild": "^0.16",
+    "esbuild-plugin-ghpages-pwa": "github:firien/esbuild-plugin-ghpages-pwa",
     "eslint": "^8.48.0",
     "eslint-config-standard": "^17.1.0"
   }
