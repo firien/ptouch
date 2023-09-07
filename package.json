@@ -1,0 +1,21 @@
+{
+  "name": "ptouch",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "labeler.js",
+  "engineStrict": true,
+  "engines" : {
+    "node" : ">=18.0.0"
+  },
+  "scripts": {
+    "test": "node test/node/pack-bits.test.js",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.48.0",
+    "eslint-config-standard": "^17.1.0"
+  }
+}
