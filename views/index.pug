@@ -24,18 +24,19 @@ html(lang="en")
     h1 Brother P-touch
     ul
       li PT-E550W
-      li P750W
-      li P710BT
-    textarea#text
+      li PT-P750W
+      li PT-P710BT
+    hr
+    textarea#text(rows=3 placeholder="label")
     button#connect Connect
     button#print(disabled) Print
     button#status(disabled) Status
     hr
-    input#hires(type="checkbox")
+    input#hires(type="checkbox" checked)
     label(for="hires") High Resolution
     input#chain(type="checkbox")
     label(for="chain") Chain
-    input#compression(type="checkbox")
+    input#compression(type="checkbox" checked)
     label(for="compression") Compress
     input#auto-cut(type="checkbox")
     label(for="auto-cut") AutoCut

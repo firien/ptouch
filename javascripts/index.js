@@ -35,25 +35,24 @@ document.addEventListener('DOMContentLoaded', () => {
   })
   const textInput = document.querySelector('textarea#text')
   const getLines = () => textInput.value.split(/\r?\n/)
-  textInput.addEventListener('input', async (e) => {
+  const generateLabel = async () => {
     const blob = makeLabel(getLines(), getOptions())
     buffer = await blob.arrayBuffer()
     document.querySelector('output').value = byteValueNumberFormatter.format(buffer.byteLength)
-  })
-  document.querySelector('button#status').addEventListener('click', async (e) => {
+  }
+  textInput.addEventListener('input', generateLabel)
+  document.querySelector('button#status').addEventListener('click', () => {
     getStatus(device)
   })
-  document.querySelector('select#tape-width').addEventListener('change', async (e) => {
+  document.querySelector('select#tape-width').addEventListener('change', (e) => {
     setTapeWidth(Number(e.target.value))
+    generateLabel()
   })
   self.addEventListener('tapeWidth', (e) => {
     document.querySelector('select#tape-width').value = String(e.detail)
+    generateLabel()
   })
   for (const cb of document.querySelectorAll('input[type=checkbox]')) {
-    cb.addEventListener('click', async (e) => {
-      const blob = makeLabel(getLines(), getOptions())
-      buffer = await blob.arrayBuffer()
-      document.querySelector('output').value = byteValueNumberFormatter.format(buffer.byteLength)
-    })
+    cb.addEventListener('click', generateLabel)
   }
 })

@@ -16,8 +16,6 @@
   "license": "ISC",
   "devDependencies": {
     "esbuild": "^0.16",
-    "esbuild-plugin-ghpages-pwa": "github:firien/esbuild-plugin-ghpages-pwa",
-    "eslint": "^8.48.0",
-    "eslint-config-standard": "^17.1.0"
+    "esbuild-plugin-ghpages-pwa": "github:firien/esbuild-plugin-ghpages-pwa"
   }
 }
